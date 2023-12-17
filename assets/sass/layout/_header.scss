@@ -1,0 +1,137 @@
+/* ============= Header Start Here ======================= */
+.header-toggle {
+    .icon {
+        font-size: 28px;
+        color: var(--dark);
+        cursor: pointer;
+    }
+}
+
+.logo {
+    img {
+        width: 70px;
+
+        @include md-screen {
+            max-width: 150px;
+        }
+    }
+}
+
+.header {
+    position: relative;
+    padding: 15px 0;
+    background: rgb(0 166 81 / 10%);
+   
+
+    // &.fixed-header {
+    //     background: var(--section-bg);;
+    //     position: sticky;
+    //     transition: .3s linear;
+    //     top: -1px;
+    //     animation: slide-down .8s;
+    //     width: 100%;
+    //     z-index: 1024;
+    //     border-bottom: 2px solid var(--base);
+    // }
+}
+
+// @keyframes slide-down {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(-150%);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateY(0);
+//     }
+// }
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header_nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: rgb(0 166 81 / 10%);
+}
+
+.header_nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header_toggler {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    background-color: var(--base);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.animated-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    transform-origin: top right;
+    background-color: var(--dark);
+    z-index: 1024;
+    transition: all linear .3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    clip-path: circle(80px at calc(100% - 63px) 52px);
+    
+    &.active {
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 0;
+        clip-path: circle(75%);
+
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 2px solid var(--base);
+    }
+
+    .cross-animated {
+        font-size: 36px;
+        color: var(--white);
+        background-color: var(--base);
+        height: 60px;
+        width: 60px;
+        display: grid;
+        place-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__list {
+        padding-top: 50px;
+
+        li {
+            a {
+                font-size: 56px;
+            }
+        }
+    }
+
+}

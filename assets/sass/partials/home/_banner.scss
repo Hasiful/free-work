@@ -1,0 +1,113 @@
+.banner-section {
+    background: rgb(0 166 81 / 10%);
+    padding: 80px 0 200px;
+    
+    @include md-screen{
+        padding: 80px 0px;
+    }
+    @include sm-screen{
+        padding: 60px 0px;
+    }
+}
+
+.counter {
+    margin-top: -120px;
+
+    @include md-screen {
+        margin-top: 0;
+        padding-top: 80px;
+    }
+}
+
+.counter-box {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 40px 0 rgb(0 0 0 / 10%);
+    background: var(--white);
+
+    &.user-box {
+        background: var(--base);
+        color: var(--white);
+
+        .counter-box__count {
+            color: var(--white);
+            @include md-screen{
+                color: var(--base);
+            }
+        }
+
+        @include md-screen {
+            background: var(--white);
+            color: var(--dark);
+        }
+    }
+
+    &__icon {
+        width: 64px;
+        margin: 0 auto 10px;
+    }
+
+    &__count {
+        margin-bottom: 0px;
+        color: var(--base);
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+}
+
+.progress{
+    height: 10px;
+}
+
+.activity-wrapper{
+    padding: 50px;
+    border-radius: 50px;
+    background-color: rgb(0 166 81 / 10%);
+    
+    @include md-screen{
+        padding: 30px;
+        border-radius: 24px;
+    }
+
+}
+
+.activity-item{
+    background-color: var(--white);
+    padding: 20px 30px 15px;
+    border-radius: 50px;
+
+    .progress-bar{
+        background-color: var(--base);
+    }
+
+    &:not(:last-child){
+        margin-bottom: 24px;
+    }
+}
+
+.activity-type,
+.activity-earn {
+    font-size: clampCal(12,18);
+    color: #eb690c;
+    font-weight: 500;
+}
+
+.activity-time{
+    color: var(--base-two);
+    font-size: 14px;
+}
+
+.activity-name{
+    font-size: clampCal(10, 14);
+    color: var(--base);
+}
+
+.activity_process_count {
+    font-size: clampCal(12,18);
+    color: var(--dark);
+    margin-bottom: 6px;
+}
