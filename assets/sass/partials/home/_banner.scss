@@ -1,11 +1,12 @@
 .banner-section {
     background: rgb(0 166 81 / 10%);
     padding: 80px 0 200px;
-    
-    @include md-screen{
+
+    @include md-screen {
         padding: 80px 0px;
     }
-    @include sm-screen{
+
+    @include sm-screen {
         padding: 60px 0px;
     }
 }
@@ -33,7 +34,8 @@
 
         .counter-box__count {
             color: var(--white);
-            @include md-screen{
+
+            @include md-screen {
                 color: var(--base);
             }
         }
@@ -59,55 +61,85 @@
     }
 }
 
-.progress{
+.progress {
     height: 10px;
 }
 
-.activity-wrapper{
+.activity-wrapper {
     padding: 50px;
     border-radius: 50px;
     background-color: rgb(0 166 81 / 10%);
-    
-    @include md-screen{
+
+    @include md-screen {
         padding: 30px;
         border-radius: 24px;
     }
 
+    @include msm-screen {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
 }
 
-.activity-item{
+.activity-item {
     background-color: var(--white);
     padding: 20px 30px 15px;
     border-radius: 50px;
 
-    .progress-bar{
+    @include msm-screen {
+        padding: 15px 10px;
+        border-radius: 12px;
+    }
+
+    .progress-bar {
         background-color: var(--base);
     }
 
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 24px;
+        @include msm-screen{
+            margin-bottom: 12px;
+        }
     }
+
 }
 
 .activity-type,
 .activity-earn {
-    font-size: clampCal(12,18);
+    font-size: clampCal(12, 18);
     color: #eb690c;
     font-weight: 500;
 }
 
-.activity-time{
+.activity-time {
     color: var(--base-two);
     font-size: 14px;
 }
 
-.activity-name{
+.activity-name {
     font-size: clampCal(10, 14);
     color: var(--base);
 }
 
 .activity_process_count {
-    font-size: clampCal(12,18);
+    font-size: clampCal(12, 18);
     color: var(--dark);
     margin-bottom: 6px;
+}
+
+.service-card{
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--base);
+    background: rgb(0 166 81 / 10%);
+
+    &__image{
+        width: 64px;
+        margin: 0 0 10px;
+    }
+
+    &__title{
+        margin-bottom: 6px;
+    }
 }
