@@ -134,6 +134,12 @@
     border-radius: 12px;
     border: 1px solid var(--base);
     background: rgb(0 166 81 / 10%);
+    transition: all linear 0.3s;
+
+    &:hover{
+        background-color: var(--base);
+        color: white;
+    }
 
     &__image {
         width: 64px;
@@ -148,8 +154,6 @@
 .callaction{
     background-color: var(--dark);
 }
-
-.callaction-content {}
 
 .callaction-content h3 {
     color: var(--white);
