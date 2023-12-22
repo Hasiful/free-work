@@ -76,54 +76,16 @@
     });
     // =============== Password Show Hide Js End =================
 
-    // ========================= Slick Slider Js Start ==============
-    $('.testimonial-slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      speed: 1500,
-      dots: true,
-      pauseOnHover: true,
-      arrows: false,
-      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
-      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            arrows: false,
-            slidesToShow: 2,
-            dots: true,
-          }
-        },
-        {
-          breakpoint: 991,
-          settings: {
-            arrows: false,
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            arrows: false,
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-    // ========================= Slick Slider Js End ===================
 
     // ========================= Client Slider Js Start ===============
-    $('.client-slider').slick({
-      slidesToShow: 6,
+    $('.payment-slider').slick({
+      slidesToShow: 4,
       slidesToScroll: 1,
-      autoplay: true,
+      autoplay:true,
       autoplaySpeed: 1000,
       pauseOnHover: true,
       speed: 2000,
-      dots: false,
+      dots: true,
       arrows: false,
       prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-long-arrow-alt-left"></i></button>',
       nextArrow: '<button type="button" class="slick-next"><i class="fas fa-long-arrow-alt-right"></i></button>',
@@ -131,25 +93,25 @@
         {
           breakpoint: 1199,
           settings: {
-            slidesToShow: 6,
+            slidesToShow: 4,
           }
         },
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 5
+            slidesToShow: 3
           }
         },
         {
           breakpoint: 767,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 2
           }
         },
         {
           breakpoint: 400,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 2
           }
         }
       ]

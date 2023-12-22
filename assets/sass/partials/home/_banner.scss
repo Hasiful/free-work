@@ -32,11 +32,19 @@
         background: var(--base);
         color: var(--white);
 
+         path{
+            fill: var(--dark);
+
+              @include md-screen {
+                fill: var(--base);
+            }
+        }
+
         .counter-box__count {
             color: var(--white);
 
             @include md-screen {
-                color: var(--base);
+                color: var(--dark);
             }
         }
 
@@ -47,13 +55,16 @@
     }
 
     &__icon {
-        width: 64px;
         margin: 0 auto 10px;
+        path{
+            fill: var(--base);
+        }
+
     }
 
     &__count {
         margin-bottom: 0px;
-        color: var(--base);
+        color: var(--dark);
     }
 
     &__title {
@@ -181,4 +192,38 @@
 
 .about-add{
     background-color: rgba(0,166,81,.1);
+}
+
+.payment-item{
+    border: 1px solid var(--base);
+    border-radius: 12px;
+    background-color: rgba(0,166,81,.1);
+    padding: 20px;
+    text-align: center;
+
+    &__image{
+        img{
+            max-width: 150px;
+            width: 100%;
+            height: 90px;
+            margin: 0 auto 10px;
+            object-fit: contain;
+        }
+    }
+
+    &__title{
+        background-color: var(--base);
+        border-radius: 4px;
+        color: var(--white);
+        padding: 4px 0;
+
+        @include sm-screen{
+            font-size: 12px;
+        }
+    }
+}
+
+.slick-initialized.slick-slider .slick-slide {
+    height: auto;
+    margin: 0 10px;
 }
